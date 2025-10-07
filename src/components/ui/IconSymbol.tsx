@@ -24,6 +24,7 @@ const MAPPING = {
   'globe': 'public',
   'questionmark.circle.fill': 'help',
   'star.fill': 'star',
+  'info.circle.fill': 'info',
 } as IconMapping;
 
 /**

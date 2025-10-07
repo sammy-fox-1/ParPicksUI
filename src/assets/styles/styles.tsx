@@ -33,6 +33,7 @@ export const styles = StyleSheet.create({
         borderRadius: 8,
         alignItems: 'center',
         width: 55,
+        padding: 3,
     },
 
     myProfileButtonTop: {
@@ -80,5 +81,22 @@ export const styles = StyleSheet.create({
     
     tabBarButtonText: {
         fontWeight: '600',
+    },
+
+    bar: {
+        position: 'relative',
+        flexDirection: 'row',
+        borderBottomWidth: StyleSheet.hairlineWidth,
+        borderColor: '#ddd',
+        backgroundColor: 'white',
+    },
+    tab: { alignItems: 'center', justifyContent: 'center', paddingVertical: 12 },
+    label: { fontSize: 14, color: '#666' },
+    labelActive: { color: '#111', fontWeight: '600' },
+    underline: {
+        position: 'absolute',
+        bottom: 0,
+        height: 2,
+        backgroundColor: '#111',
     },
 });

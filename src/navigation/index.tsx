@@ -13,6 +13,7 @@ import { createMaterialTopTabNavigator, MaterialTopTabBar } from '@react-navigat
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList, DrawerContentComponentProps } from '@react-navigation/drawer';
 import { useWindowDimensions, View, TouchableOpacity, Text } from 'react-native';
 import { styles } from '@/assets/styles/styles';
+import { Pool } from './screens/Pool';
 
 function HomeTabs() {
   function CustomDrawerContent(props: DrawerContentComponentProps) {
@@ -81,6 +82,7 @@ function HomeTabs() {
           <Drawer.Screen name="Players" component={Players} options={{ drawerIcon: ({ color, size }) => <IconSymbol size={size ?? 28} name="star.fill" color={color} /> }} />
           <Drawer.Screen name="Global Pool" component={GlobalPool} options={{ drawerIcon: ({ color, size }) => <IconSymbol size={size ?? 28} name="globe" color={color} /> }} />
           <Drawer.Screen name="How To Play" component={HowToPlay} options={{ drawerIcon: ({ color, size }) => <IconSymbol size={size ?? 28} name="questionmark.circle.fill" color={color} /> }} />
+          <Drawer.Screen name="Pool" component={Pool} />
         </Drawer.Navigator>
       </>
     );
@@ -107,6 +109,10 @@ const RootStack = createNativeStackNavigator({
       options: {
         headerShown: false,
       },
+    },
+    Pool: {
+      screen: Pool,
+      // options: { title: 'Pool' } // optional
     },
   },
 });
